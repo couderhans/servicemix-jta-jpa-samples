@@ -1,0 +1,10 @@
+----------------------------------------------------------------
+Fri Dec 21 15:31:08 CET 2012:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.9.1.0 - (1344872): instance a816c00e-013b-bddf-f19e-0000066bbea0 
+on database directory /home/ergoproxy/Projects/servicemix-jta-jpa-samples/target/testdb  with class loader sun.misc.Launcher$AppClassLoader@53372a1a 
+Loaded from file:/home/ergoproxy/.m2/repository/org/apache/derby/derby/10.9.1.0/derby-10.9.1.0.jar
+java.vendor=Sun Microsystems Inc.
+java.runtime.version=1.6.0_24-b24
+user.dir=/home/ergoproxy/Projects/servicemix-jta-jpa-samples
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''

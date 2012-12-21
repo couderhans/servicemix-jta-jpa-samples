@@ -12,12 +12,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>model</artifactId>
+    <name>Anova :: Samples :: Servicemix Jpa Jta :: Jms Derby Jta Sample :: Model</name>
+    <packaging>bundle</packaging>
+
 
     <dependencies>
         <dependency>
             <groupId>org.apache.geronimo.specs</groupId>
             <artifactId>geronimo-jpa_2.0_spec</artifactId>
             <version>1.1</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbcp</groupId>
+            <artifactId>commons-dbcp</artifactId>
+            <version>1.4</version>
         </dependency>
     </dependencies>
 
@@ -31,7 +39,7 @@
                 <version>1.2</version>
                 <configuration>
                     <includes>be/anova/samples/servicemix/model/entity/*.class</includes>
-                    <addDefaultConstructor>false</addDefaultConstructor>
+                    <addDefaultConstructor>true</addDefaultConstructor>
                     <enforcePropertyRestrictions>true</enforcePropertyRestrictions>
                 </configuration>
                 <executions>
@@ -60,7 +68,9 @@
                     <instructions>
                         <Bundle-SymbolicName>${project.artifactId}</Bundle-SymbolicName>
                         <Import-Package>*</Import-Package>
-                        <fail_ok>true</fail_ok>
+                        <Export-Package>
+                            be.anova.samples.servicemix.model
+                        </Export-Package>
                     </instructions>
                 </configuration>
             </plugin>

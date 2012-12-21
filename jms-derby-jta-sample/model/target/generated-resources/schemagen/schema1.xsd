@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:complexType name="phone">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="contactInfo">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="address">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="coordinates">
+    <xs:sequence/>
+  </xs:complexType>
+
+  <xs:complexType name="user">
+    <xs:sequence/>
+  </xs:complexType>
+</xs:schema>
+

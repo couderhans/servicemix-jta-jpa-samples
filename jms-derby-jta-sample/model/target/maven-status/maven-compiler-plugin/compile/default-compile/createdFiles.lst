@@ -1,0 +1,6 @@
+be/anova/samples/servicemix/model/entity/User.class
+be/anova/samples/servicemix/model/entity/ContactInfo.class
+be/anova/samples/servicemix/model/entity/Coordinates.class
+be/anova/samples/servicemix/model/entity/Address.class
+be/anova/samples/servicemix/model/entity/Phone.class
+be/anova/samples/servicemix/model/entity/ObjectFactory.class

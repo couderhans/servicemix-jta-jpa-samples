@@ -14,7 +14,7 @@
     <!--expose the local jpa transaction manager-->
     <osgi:service ref="jpaTransactionManager" interface="org.springframework.transaction.PlatformTransactionManager">
         <osgi:service-properties>
-            <entry key="persistenceUnit" value="address-model"/>
+            <entry key="persistenceUnit" value="user0"/>
         </osgi:service-properties>
     </osgi:service>
 

@@ -1,10 +1,12 @@
 package be.anova.samples.servicemix.model.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.CascadeType;
-import javax.persistence.Embeddable;
-import javax.persistence.ManyToOne;
+import javax.persistence.*;
+import javax.xml.bind.annotation.*;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Address")
+@XmlRootElement(name = "Address")
+@Access(value = AccessType.FIELD)
 @Embeddable
 public class Address {
     @Basic
@@ -17,6 +19,7 @@ public class Address {
     private Integer zip;
 
     // Relationship from an Embeddable to an Entity
+    @XmlTransient
     @ManyToOne(cascade = CascadeType.ALL)
     Coordinates coordinates;
 

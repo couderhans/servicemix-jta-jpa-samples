@@ -11,7 +11,7 @@
     <tx:annotation-driven transaction-manager="jpaTransactionManager" />
 
     <bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-        <property name="persistenceUnitName" value="address"/>
+        <property name="persistenceUnitName" value="user0"/>
         <property name="jpaProperties">
             <props>
                 <prop key="openjpa.jdbc.SynchronizeMappings">buildSchema(SchemaAction='dropDB,add',ForeignKeys=true)</prop>

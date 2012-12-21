@@ -21,16 +21,13 @@ package be.anova.samples.servicemix.model.entity;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.Basic;
-import javax.persistence.CollectionTable;
-import javax.persistence.ElementCollection;
-import javax.persistence.Embedded;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
+import javax.xml.bind.annotation.*;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "User0")
+@XmlRootElement(name = "User0")
+@Access(value = AccessType.FIELD)
 @Entity
 // User is a reserved keyword for derby, so use a different table name.
 @Table(name = "User0")
@@ -42,6 +39,8 @@ public class User {
     ContactInfo contactInfo;
 
     // Collection of embeddables
+    @XmlElementWrapper(name = "adresses")
+    @XmlElement(name = "address")
     @ElementCollection
     @CollectionTable(name = "user_addresses")
     private Set<Address> addresses = new HashSet<Address>();

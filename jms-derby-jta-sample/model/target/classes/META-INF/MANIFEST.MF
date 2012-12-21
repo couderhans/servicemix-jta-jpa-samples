@@ -5,7 +5,7 @@ Bundle-Version: 1.0.0.SNAPSHOT
 Tool: Bnd-0.0.357
 Bundle-Name: Anova :: Samples :: Servicemix Jpa Jta :: Jms Derby Jta S
  ample :: Model
-Bnd-LastModified: 1356100165263
+Bnd-LastModified: 1356104852500
 Created-By: Apache Maven Bundle Plugin
 Bundle-ManifestVersion: 2
 Bundle-SymbolicName: model

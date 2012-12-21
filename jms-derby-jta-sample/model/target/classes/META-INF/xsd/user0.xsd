@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<xs:schema version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+    <xs:element name="Address" type="Address"/>
+
+    <xs:element name="ContactInfo" type="ContactInfo"/>
+
+    <xs:element name="Coordinates" type="Coordinates"/>
+
+    <xs:element name="Phone" type="Phone"/>
+
+    <xs:element name="User0" type="User0"/>
+
+    <xs:complexType name="Phone">
+        <xs:sequence>
+            <xs:element name="number" type="xs:string" minOccurs="0"/>
+            <xs:element name="type" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="ContactInfo">
+        <xs:sequence>
+            <xs:element name="homeAddress" type="Address" minOccurs="0"/>
+            <xs:element name="homePhone" type="Phone" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Address">
+        <xs:sequence>
+            <xs:element name="street" type="xs:string" minOccurs="0"/>
+            <xs:element name="city" type="xs:string" minOccurs="0"/>
+            <xs:element name="state" type="xs:string" minOccurs="0"/>
+            <xs:element name="zip" type="xs:int" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="Coordinates">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="longitude" type="xs:string" minOccurs="0"/>
+            <xs:element name="latitude" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:complexType name="User0">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="contactInfo" type="ContactInfo" minOccurs="0"/>
+            <xs:element name="adresses" minOccurs="0">
+                <xs:complexType>
+                    <xs:sequence>
+                        <xs:element name="address" type="Address" minOccurs="0" maxOccurs="unbounded"/>
+                    </xs:sequence>
+                </xs:complexType>
+            </xs:element>
+            <xs:element name="user_name" type="xs:string" minOccurs="0"/>
+            <xs:element name="user" type="xs:string" minOccurs="0"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>

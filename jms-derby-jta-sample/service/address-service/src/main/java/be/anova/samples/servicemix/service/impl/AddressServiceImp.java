@@ -14,7 +14,7 @@ import javax.persistence.PersistenceContext;
  */
 public class AddressServiceImp implements AddressService {
 
-    @PersistenceContext(unitName = "address")
+    @PersistenceContext(unitName = "user0")
     protected EntityManager entityManager;
 
     @Override

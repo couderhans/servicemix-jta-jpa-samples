@@ -18,9 +18,19 @@
  */
 package be.anova.samples.servicemix.model.entity;
 
+import javax.persistence.Access;
+import javax.persistence.AccessType;
 import javax.persistence.Basic;
 import javax.persistence.Embeddable;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Phone")
+@XmlRootElement(name = "Phone")
+@Access(value = AccessType.FIELD)
 @Embeddable
 public class Phone {
     public Phone() {

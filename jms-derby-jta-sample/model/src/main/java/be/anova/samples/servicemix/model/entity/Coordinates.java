@@ -18,12 +18,16 @@
  */
 package be.anova.samples.servicemix.model.entity;
 
-import javax.persistence.Basic;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlType;
 
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlType(name = "Coordinates")
+@XmlRootElement(name = "Coordinates")
+@Access(value = AccessType.FIELD)
 @Entity
 public class Coordinates {
     @Id

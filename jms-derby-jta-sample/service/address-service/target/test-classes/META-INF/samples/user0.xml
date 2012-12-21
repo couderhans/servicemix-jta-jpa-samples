@@ -1,0 +1,42 @@
+<User0>
+    <id>3</id>
+    <!--Optional:-->
+    <contactInfo>
+        <!--Optional:-->
+        <homeAddress>
+            <!--Optional:-->
+            <street>string</street>
+            <!--Optional:-->
+            <city>string</city>
+            <!--Optional:-->
+            <state>string</state>
+            <!--Optional:-->
+            <zip>3</zip>
+        </homeAddress>
+        <!--Optional:-->
+        <homePhone>
+            <!--Optional:-->
+            <number>string</number>
+            <!--Optional:-->
+            <type>string</type>
+        </homePhone>
+    </contactInfo>
+    <!--Optional:-->
+    <adresses>
+        <!--Zero or more repetitions:-->
+        <address>
+            <!--Optional:-->
+            <street>string</street>
+            <!--Optional:-->
+            <city>string</city>
+            <!--Optional:-->
+            <state>string</state>
+            <!--Optional:-->
+            <zip>3</zip>
+        </address>
+    </adresses>
+    <!--Optional:-->
+    <user_name>string</user_name>
+    <!--Optional:-->
+    <user>string</user>
+</User0>

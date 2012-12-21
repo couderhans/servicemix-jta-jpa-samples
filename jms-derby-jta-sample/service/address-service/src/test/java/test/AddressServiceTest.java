@@ -1,7 +1,6 @@
 package test;
 
-import be.anova.samples.servicemix.model.entity.Address;
-import be.anova.samples.servicemix.model.entity.ObjectFactory;
+import be.anova.samples.servicemix.model.entity.User;
 import be.anova.samples.servicemix.service.AddressService;
 import org.apache.commons.dbcp.BasicDataSource;
 import org.junit.Assert;
@@ -50,8 +49,7 @@ public class AddressServiceTest extends AbstractJUnit4SpringContextTests {
     EntityManager entityManager;
 
     @BeforeClass
-    public static void setUpClass() throws Exception, JAXBException, IOException, SQLException
-    {
+    public static void setUpClass() throws Exception, JAXBException, IOException, SQLException {
         //JNDI setup
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setDriverClassName("org.apache.derby.jdbc.EmbeddedDataSource40");
@@ -63,7 +61,7 @@ public class AddressServiceTest extends AbstractJUnit4SpringContextTests {
         builder.bind("osgi:service/javax.sql.DataSource/(osgi.jndi.service.name=jdbc/dataSource/address)", dataSource);
 
         //jaxbContext setup
-        jaxbContext = JAXBContext.newInstance(ObjectFactory.class.getPackage().getName(), ObjectFactory.class.getClassLoader());
+        //jaxbContext = JAXBContext.newInstance(ObjectFactory.class.getPackage().getName(), ObjectFactory.class.getClassLoader());
 
         Thread.sleep(1000);
     }
@@ -75,12 +73,11 @@ public class AddressServiceTest extends AbstractJUnit4SpringContextTests {
     }
 
     @Test
-    public void testAddress() throws Exception
-    {
+    public void testAddress() throws Exception {
         System.out.println("testAcceptorContractManagement");
         Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
-        Address address = (Address) unmarshaller.unmarshal(new File("src/test/resources/META-INF/samples/address.xml"));
-        Assert.assertNotNull(address);
+        User user = (User) unmarshaller.unmarshal(new File("src/test/resources/META-INF/samples/user0.xml"));
+        Assert.assertNotNull(user);
 
     }
 

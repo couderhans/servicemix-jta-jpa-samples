@@ -1,21 +1,94 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<modelVersion>4.0.0</modelVersion>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
 
-	<parent>
-	<groupId>be.anova.samples.servicemix<groupId>
-	<artifactId>servicemix-jta-jpa-samples</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
-	</parent>
+    <parent>
+        <groupId>be.anova.samples.servicemix</groupId>
+        <artifactId>servicemix-jta-jpa-samples</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
 
-	<artifactId>jms-derby-jta-sample</artifactId>
-	<name>AWL ACQ :: WLSI BC_MC SEPA :: project</name>
-	<version>1.0.0-SNAPSHOT</version>
-	<packaging>pom</packaging>
+    <artifactId>jms-derby-jta-sample</artifactId>
+    <name>Anova :: Samples :: Servicemix Jpa Jta :: Jms Derby Jta Sample</name>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
 
-	<modules>
-		<module>utils</module>
-	</modules>
+    <modules>
+        <module>model</module>
+    </modules>
+
+    <properties>
+        <junit.version>4.8.1</junit.version>
+        <log4j.version>1.2.15</log4j.version>
+        <slf4j.version>1.6.1</slf4j.version>
+        <org.apache.camel.version>2.8.0</org.apache.camel.version>
+        <javax.persistence>1.0.2</javax.persistence>
+        <org.springframework.version>3.0.5.RELEASE</org.springframework.version>
+        <!-- Maven Plugin -->
+        <maven.bundle.plugin.version>2.1.0</maven.bundle.plugin.version>
+        <maven.versions.plugin.version>1.2</maven.versions.plugin.version>
+        <maven.compiler.plugin.version>2.3.2</maven.compiler.plugin.version>
+        <!-- JPA openjpa -->
+        <org.apache.openjpa.version>2.2.0</org.apache.openjpa.version>
+    </properties>
+
+
+    <dependencies>
+        <!-- logging -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>${slf4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>log4j</groupId>
+            <artifactId>log4j</artifactId>
+            <version>${log4j.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- camel -->
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-core</artifactId>
+            <version>${org.apache.camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-spring</artifactId>
+            <version>${org.apache.camel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.persistence</groupId>
+            <artifactId>persistence-api</artifactId>
+            <version>${javax.persistence}</version>
+        </dependency>
+
+        <!-- testing -->
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>${junit.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.camel</groupId>
+            <artifactId>camel-test</artifactId>
+            <version>${org.apache.camel.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>${org.springframework.version}</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
 
 </project>

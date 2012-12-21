@@ -10,8 +10,6 @@
 
     <modules>
         <module>jms-derby-jta-sample</module>
-        <module>service</module>
-        <module>address-service</module>
     </modules>
 
 </project>
